@@ -271,6 +271,7 @@ class GraphicBackend(TextBackend):
 
     def send_card(self, card):
         self.app.newAnswer.emit(CARD_TMPL.render(card=card))
+        return None
 
     def change_presence(self, status: str = ONLINE, message: str = "") -> None:
         pass
